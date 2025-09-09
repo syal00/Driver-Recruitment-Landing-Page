@@ -1,0 +1,319 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f9f9fc;
+  color: #333;
+  line-height: 1.6;
+}
+
+.header {
+  padding: 20px;
+}
+
+.logo {
+  width: 80px;
+}
+
+.main {
+  padding-left: 30px;
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;   
+  background-size: relative;
+}
+
+.content {
+  position: relative; /* child elements like image can be absolutely positioned */
+  text-align: left;
+  max-width: 700px;
+  width: 100%;
+  padding-right: 270px;
+  padding-bottom: 130px;
+}
+
+.content h1 {
+  font-size: 60px;
+  margin-bottom: 20px;
+  line-height: 70px;
+  font-weight: 600;
+}
+
+.content p {
+  font-size: 20px;
+  color: #777;
+}
+
+.scooter {
+  position: absolute;
+  top: 40%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  height: auto;
+  z-index: -1;
+}
+
+.form-section {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 10px -4px rgba(0, 0, 0, 0.15); /* bottom-only shadow */
+  max-width: 400px;
+  width: 100%;
+}
+
+
+
+
+
+
+
+.apply-form h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.apply-form p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.apply-form input[type="text"],
+.apply-form input[type="email"],
+.apply-form input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.checkbox input {
+  margin-right: 10px;
+}
+
+.submit-btn {
+  width: 100%;
+  background: #6ee7b7;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.submit-btn:hover {
+  background: #34d399;
+}
+
+.already-applied {
+  font-size: 12px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.already-applied a {
+  color: #f87171;
+  text-decoration: none;
+}
+
+.bottom-section {
+  background:yellow;
+  padding: 30px;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.earnings h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.earnings p {
+  margin-bottom: 10px;
+}
+
+.inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.inputs input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.calculate-btn {
+  background: #f87171;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.calculate-btn:hover {
+  background: #ef4444;
+}
+
+.social-icons a {
+  margin-left: 10px;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .main {
+    flex-direction: column;
+    text-align: center;
+    background-position: bottom center;
+    background-size: cover;
+  }
+
+  .form-section {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 46px;
+    padding-left: 30px;
+  }
+.content p {
+
+   padding-left: 30px;}
+
+  .main {
+    padding: 10px;
+  }
+
+  .header{
+    padding: 10px 40px;
+  }
+
+  .form-section {
+    margin-top: 150px;
+  }
+
+  .scooter {
+    width: 50%;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+  }
+
+  .social-icons{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .bottom-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .content {
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .content h1 {
+    font-size: 25px;
+    line-height: 36px;
+    
+  }
+
+  .content p {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 20px;
+  }
+
+  .scooter {
+    position: static;
+    width: 100%;
+    max-width: 280px;
+    margin: 20px auto;
+  }
+
+  .form-section {
+    width: 100%;
+    margin: 0;
+    padding-left: 20px;
+    border-radius: 0;
+    box-shadow: none;
+    text-align: left;
+  }
+
+  .inputs {
+    flex-direction: column;
+  }
+
+  .form-section input,
+  .form-section button {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-left: 50px;
+  }
+
+  .calculate-section {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .calculate-section input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .social-icons img {
+    width: 30px;
+    height: 30px;
+  }
+}
